@@ -1,0 +1,13 @@
+body {
+    height: 100%;
+}
+
+main {
+    background-image: url("../romantic-couple-cafe-is-drinking-coffee-talking-handsome-man-beautiful-girl-enjoying-being-together.jpg");
+    height: 100vh;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
