@@ -8,7 +8,6 @@ onDelete: 'CASCADE'
 
 Favourites.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'CASCADE'
     });
 
     module.exports = {
