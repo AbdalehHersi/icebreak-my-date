@@ -36,7 +36,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 }
 
 .landing-container {
@@ -46,7 +45,19 @@ main {
 }
 
 /* .descr {
-    margin: 10%;
+    margin-top: 5%;
     background-color: red;
-    width: 15%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
 } */
+
+.descr-container {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
