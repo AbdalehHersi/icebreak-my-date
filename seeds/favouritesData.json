@@ -1,0 +1,14 @@
+[
+    {
+      "user_id": 1,
+      "description": "Funny joke"
+    },
+    {
+      "user_id": 2,
+      "description": "Funnier joke"
+    },
+    {
+      "user_id": 3,
+      "description": "pEven funnier joke"
+    }
+  ]
