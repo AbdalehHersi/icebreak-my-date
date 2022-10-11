@@ -5,7 +5,7 @@ const User = require('../models/User');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage');
+    res.render('landing');
   } catch (err) {
     res.status(500).json(err);
   }
@@ -17,6 +17,14 @@ router.get('/login', async (req, res) => {
       return res.redirect('/');
     }
     res.render('login');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/main', async (req, res) => {
+  try {
+    res.render('mainpage');
   } catch (err) {
     res.status(500).json(err);
   }
