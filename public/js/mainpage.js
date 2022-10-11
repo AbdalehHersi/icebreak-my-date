@@ -28,20 +28,18 @@
 //   }
 // }
 
-function getBucket() {
-  console.log("INSIDE FUNCTION")
-  fetch("/api/request/bucketlist")
-  .then((res) => {
-    console.log("SENT FETCH");
-    console.log(res);
-  })
-  .catch((error) => {
-    console.error(error)
-  })
-  .finally(function(){
-    console.log("INSIDE FINALLY")
-  })
+async function getBucket() {
+  const url = "/api/request/bucketlist";
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data)
+  } catch (error) {
+    console.log(error)
+  }
 }
+
+
 const bucketButton = document.getElementById('btn-bucket');
 console.log("BUCKET BUTTON PRESSED", bucketButton);
 bucketButton.addEventListener('click', getBucket);

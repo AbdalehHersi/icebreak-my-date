@@ -3,19 +3,17 @@ const axios = require('axios');
 
 
 router.get("/bucketlist", async (req, res) => {
-  return axios.get('https://api.api-ninjas.com/v1/bucketlist', {
-    headers: {
-      'X-Api-Key': 'cv/3TTGn9rsxmhNJCyXxtw==XZWUQGC4DsfeUJxP'
-    }
-  })
-    .then(function (response) {
-      // handle success
-      return response.data;
+  try {
+    const response = await axios.get('https://api.api-ninjas.com/v1/bucketlist', {
+      headers: {
+        'X-Api-Key': process.env.API_KEY,
+      },
     })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    })
+    const data = response.data;
+    res.status(200).json(data);
+  } catch (error) {
+    throw new Error(error.message);
+  }
 })
 
 
