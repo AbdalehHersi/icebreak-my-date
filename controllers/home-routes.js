@@ -30,6 +30,17 @@ router.get('/main', async (req, res) => {
   }
 });
 
+router.post('/favourites', async (req, res) => {
+  try {
+    res.render('favourites');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
+
 // router.get('/project/:id', async (req, res) => {
 //   try {
 //     const projectData = await Project.findByPk(req.params.id, {
