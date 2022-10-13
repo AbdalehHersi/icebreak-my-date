@@ -1,3 +1,5 @@
+let paragraph = document.getElementById("apiResults");
+
 // BUCKET LIST API
 
 async function getBucket() {
@@ -5,7 +7,7 @@ async function getBucket() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data)
+    paragraph.textContent = data.item;
   } catch (error) {
     console.log(error)
   }
@@ -18,11 +20,12 @@ async function getHobby() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data)
+    paragraph.textContent = data.hobby;
   } catch (error) {
     console.log(error)
   }
 }
+
 
 // HISTORICAL EVENTS
 
@@ -31,7 +34,7 @@ async function getFact() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    console.log(data[0])
+    paragraph.textContent = data[0].fact;
   } catch (error) {
     console.log(error)
   }
