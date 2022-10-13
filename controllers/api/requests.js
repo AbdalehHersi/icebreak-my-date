@@ -50,7 +50,9 @@ router.get("/fact", async (req, res) => {
   } catch (error) {
     throw new Error(error.message);
   }
-})
+});
+
+
 
 
 module.exports = router;
