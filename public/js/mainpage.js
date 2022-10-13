@@ -1,5 +1,25 @@
 let paragraph = document.getElementById("apiResults");
 
+function hideEl() {
+  var saveBtn = document.getElementById("btn-fav");
+  if (saveBtn.style.display === "block") {
+    saveBtn.style.display = "none";
+  } else {
+    saveBtn.style.display = "none";
+  }
+}
+
+function showEl() {
+  var saveBtn = document.getElementById("btn-fav");
+  if (saveBtn.style.display === "none") {
+    saveBtn.style.display = "block";
+  } else {
+    saveBtn.style.display = "block";
+  }
+}
+
+hideEl();
+
 // BUCKET LIST API
 
 async function getBucket() {
@@ -21,6 +41,7 @@ async function getHobby() {
     const response = await fetch(url);
     const data = await response.json();
     paragraph.textContent = data.hobby;
+    showEl();
   } catch (error) {
     console.log(error)
   }
