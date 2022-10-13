@@ -1,5 +1,6 @@
 let paragraph = document.getElementById("apiResults");
-var saveBtn = document.getElementById("btn-fav");
+let aLink = document.getElementById("hobbyLink");
+let saveBtn = document.getElementById("btn-fav");  
 
 function hideEl() {
   var saveBtn = document.getElementById("btn-fav");
@@ -81,7 +82,10 @@ async function getHobby() {
   try {
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     paragraph.textContent = data.hobby;
+    aLink.textContent = data.link; 
+    
     showEl();
   } catch (error) {
     console.log(error)
