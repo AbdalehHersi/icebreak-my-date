@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "mysql": "node seeds/seed.js" 
+    "mysql": "node seeds/seed.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/AbdalehHersi/icebreak-my-date#readme",
   "dependencies": {
+    "axios": "^1.1.2",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.1",
     "controllers": "^0.0.2",
