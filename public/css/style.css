@@ -33,6 +33,21 @@ section {
     position: relative;
 }
 
+.loginValidator::after {
+    content: "❗ Incorrect name or password, please try again";
+    color: red;
+}
+
+.signupValidator::after {
+    content: "❗ Password must have a minimum of 8";
+    color: red;
+}
+
+.signupValidatorNoDetails::after {
+    content: "❗ Username and password must be filled";
+    color: red;
+}
+
 /* .button {
     size: large;
     border-radius: 25% 10%;
