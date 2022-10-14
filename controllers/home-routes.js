@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const Favorite = require("../models/Favourite")
-const User = require('../models/User');
+const { User, Favourite } = require("../models")
 // const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -30,9 +29,18 @@ router.get('/main', async (req, res) => {
   }
 });
 
-router.post('/favourites', async (req, res) => {
+router.get('/favorites', async (req, res) => {
   try {
-    res.render('favourites');
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Favourite }],
+    });
+    const favorites = userData.get({ plain: true });
+    console.log("User: ", favorites)
+    res.render('favourite', {
+      favorites,
+      logged_in: true
+    });
   } catch (err) {
     res.status(500).json(err);
   }
