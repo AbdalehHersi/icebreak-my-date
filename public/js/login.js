@@ -23,6 +23,9 @@ const loginFormHandler = async (event) => {
     } else {
       errorMessage.classList.add("loginValidator");
     }
+  } else {
+    const errorMessage = document.getElementById("passwordLogin");
+    errorMessage.classList.add("loginValidatorNoDetails");
   }
 };
 

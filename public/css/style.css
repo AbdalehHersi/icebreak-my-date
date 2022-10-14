@@ -30,7 +30,12 @@ main::before {
 }
 
 section {
+    height: 100vh;
+    width: auto;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .loginValidator::after {
@@ -48,13 +53,23 @@ section {
     color: red;
 }
 
-/* .button {
-    size: large;
-    border-radius: 25% 10%;
-    background-color: #343a40;
+.loginValidatorNoDetails::after {
+    content: "❗ Username and password must be filled in";
+    color: red;
 }
 
-.anchor {
-    color: white;
-    background-color: #343a40;
-} */
+.box {
+    padding: 2rem;
+    margin: 2rem;
+    background-color: rgb(255, 241, 214);
+    border-radius: 30px;
+    width: 80vw;
+}
+
+.FORMS {
+    padding: 3rem;
+}
+
+.button {
+    display: block;
+}
