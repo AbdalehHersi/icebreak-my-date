@@ -16,9 +16,9 @@
         <section>
             {{#if logged_in}}
             <button><a href="/favorites">favourite</a></button>
-            <button class="no-button" id="logout">logout</button>
+            <button id="logout">logout</button>
             {{else}}
-            <button><a href="/login">login</a></button>
+            <button class="button"><a class="anchor" href="/login">login</a></button>
             {{/if}}
 
             {{{ body }}}
