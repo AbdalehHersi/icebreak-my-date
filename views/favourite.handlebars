@@ -1,4 +1,8 @@
 <h1>Favorites: </h1>
 {{#each favorites.favourites as |fav|}}
 <p>{{fav.description}}</p>
+<button class="fav-list" data-id="{{fav.id}}">Delete</button>
 {{/each}}
+
+
+<script src="/js/favourites.js"></script>
