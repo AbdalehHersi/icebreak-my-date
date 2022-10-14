@@ -14,7 +14,7 @@ Favourite.init(
       description: {
         type: DataTypes.STRING,
         allowNull: false,
-      }, 
+      }, // as unique : true 
       user_id: {
         type: DataTypes.INTEGER,
         references: {
