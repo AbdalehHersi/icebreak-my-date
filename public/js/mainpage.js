@@ -19,46 +19,20 @@ function showEl() {
   }
 };
 
-
-
-
 const saveFavourite = async () => {
   
-  console.log(paragraph.textContent);
   var favourite = paragraph.textContent;
- 
+
     const response = await fetch('/api/favourites', {
       method: 'POST',
       body: JSON.stringify({favourite}),
       headers: { 'Content-Type': 'application/json' },
     });
 
-    if (response.ok) {
-      document.location.replace('/main');
-    } else {
-      alert(response.statusText);
+    if (!response.ok) {
+      console.error(error)
     }
-  
 };
-
-
-// const delButtonHandler = async (event) => {
-//   if (event.target.hasAttribute('data-id')) {
-//     const id = event.target.getAttribute('data-id');
-
-//     const response = await fetch(`/api/projects/${id}`, {
-//       method: 'DELETE',
-//     });
-
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert('Failed to delete project');
-//     }
-//   }
-// };
-
-// document.querySelector(".login-form").addEventListener('submit', loginFormHandler);
 
 hideEl();
 
@@ -70,6 +44,7 @@ async function getBucket() {
     const response = await fetch(url);
     const data = await response.json();
     paragraph.textContent = data.item;
+    showEl();
   } catch (error) {
     console.log(error)
   }
@@ -101,12 +76,11 @@ async function getFact() {
     const response = await fetch(url);
     const data = await response.json();
     paragraph.textContent = data[0].fact;
+    showEl();
   } catch (error) {
     console.log(error)
   }
 };
-
-
 
 document.getElementById('btn-hobby').addEventListener('click', getHobby);
 document.getElementById('btn-fact').addEventListener('click', getFact);
