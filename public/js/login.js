@@ -4,9 +4,9 @@ const loginFormHandler = async (event) => {
 
   const username = document.querySelector('#username-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
-  console.log(username, password);
   if (username && password) {
 
+    const errorMessage = document.getElementById("passwordLogin");
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({
@@ -17,9 +17,15 @@ const loginFormHandler = async (event) => {
     });
     if (response.ok) {
       document.location.replace('/main');
+      if (errorMessage.classList === "loginValidator") {
+        errorMessage.classList.remove("loginValidator")
+      }
     } else {
-      alert(response.statusText);
+      errorMessage.classList.add("loginValidator");
     }
+  } else {
+    const errorMessage = document.getElementById("passwordLogin");
+    errorMessage.classList.add("loginValidatorNoDetails");
   }
 };
 
@@ -28,8 +34,7 @@ const signupFormHandler = async (event) => {
 
   const username = document.querySelector('#name-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
-
-  console.log("username: " + username, "password: " + password)
+  const errorMessage = document.getElementById("errorMessage");
 
   if (username && password) {
     const response = await fetch('/api/users', {
@@ -40,9 +45,18 @@ const signupFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace('/main');
+      if (errorMessage.classList === "signupValidator") {
+        errorMessage.classList.remove("signupValidator");
+      }
     } else {
-      alert(response.statusText);
+      errorMessage.classList.remove("signupValidatorNoDetails");
+      errorMessage.classList.add("signupValidator");
     }
+  } else {
+    if (errorMessage.classList === "signupValidator") {
+      errorMessage.classList.remove("signupValidator")
+    }
+    errorMessage.classList.add("signupValidatorNoDetails")
   }
 };
 

@@ -1,63 +1,75 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
-    height: 100%;
+    height: 100vh;
 }
 
 main {
-    background-image: url("../romantic-couple-cafe-is-drinking-coffee-talking-handsome-man-beautiful-girl-enjoying-being-together.jpg");
-    height: 100vh;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
-.handleBars-conatiner {
-    height: 100%;
-}
-
-.homepage {
-    height: 100%;
-}
-
-.Button {
+main::before {
+    content: ' ';
     display: block;
-    padding: 1rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.85;
+    background-image: url('../romantic-couple-cafe-is-drinking-coffee-talking-handsome-man-beautiful-girl-enjoying-being-together.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
 }
 
-.landing {
-    margin-top: 5%;
-    height: 30%;
-    width: 30%;
+section {
+    height: 100vh;
+    width: auto;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.landing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.loginValidator::after {
+    content: "❗ Incorrect name or password, please try again";
+    color: red;
 }
 
-/* .descr {
-    margin-top: 5%;
-    background-color: red;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40%;
-} */
-
-.descr-container {
-    margin-top: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.signupValidator::after {
+    content: "❗ Password must have a minimum of 8";
+    color: red;
 }
 
+.signupValidatorNoDetails::after {
+    content: "❗ Username and password must be filled";
+    color: red;
+}
+
+.loginValidatorNoDetails::after {
+    content: "❗ Username and password must be filled in";
+    color: red;
+}
+
+.box {
+    padding: 2rem;
+    margin: 2rem;
+    background-color: rgb(255, 241, 214);
+    border-radius: 30px;
+    width: 80vw;
+}
+
+.FORMS {
+    padding: 3rem;
+}
+
+.button {
+    display: block;
+}

@@ -3,7 +3,6 @@ let aLink = document.getElementById("hobbyLink");
 let saveBtn = document.getElementById("btn-fav");  
 
 function hideEl() {
-  var saveBtn = document.getElementById("btn-fav");
   if (saveBtn.style.display === "block") {
     saveBtn.style.display = "none";
   } else {
@@ -16,6 +15,22 @@ function showEl() {
     saveBtn.style.display = "block";
   } else {
     saveBtn.style.display = "block";
+  }
+};
+
+function hideLink() {
+    if (aLink.style.display === "block") {
+      aLink.style.display = "none";
+    } else {
+      aLink.style.display = "none";
+    }
+}
+
+function showLink() {
+  if (aLink.style.display === "none") {
+    aLink.style.display = "block";
+  } else {
+    aLink.style.display = "block";
   }
 };
 
@@ -41,6 +56,7 @@ hideEl();
 async function getBucket() {
   const url = "/api/request/bucketlist";
   try {
+    hideLink()
     const response = await fetch(url);
     const data = await response.json();
     paragraph.textContent = data.item;
@@ -60,7 +76,7 @@ async function getHobby() {
     console.log(data);
     paragraph.textContent = data.hobby;
     aLink.textContent = data.link; 
-    
+    showLink();
     showEl();
   } catch (error) {
     console.log(error)
@@ -73,6 +89,7 @@ async function getHobby() {
 async function getFact() {
   const url = "/api/request/fact";
   try {
+    hideLink()
     const response = await fetch(url);
     const data = await response.json();
     paragraph.textContent = data[0].fact;
