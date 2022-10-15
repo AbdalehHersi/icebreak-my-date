@@ -18,6 +18,7 @@ main {
     position: relative;
 }
 
+
 #main .box {
     display: none;
 }
@@ -107,6 +108,7 @@ section {
     background-color: black;
     opacity: 0.9;
     border-radius: 5px;
+
 }
 
 .saveValidate::after {
@@ -117,6 +119,7 @@ section {
 .saveValidateError::after {
     content: "⚠️ Cannot save the same Icebreak twice";
     color: orange;
+
 }
 
 .btnGroup {
