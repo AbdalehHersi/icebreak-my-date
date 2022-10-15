@@ -43,9 +43,20 @@ const saveFavourite = async () => {
       body: JSON.stringify({favourite}),
       headers: { 'Content-Type': 'application/json' },
     });
-
+    
     if (!response.ok) {
+      const btnContainer = document.getElementById("btnContainer");
+      btnContainer.classList.add("saveValidateError");
+      setTimeout(() => {
+        btnContainer.classList.remove("saveValidateError");
+      }, 2000)
       console.error(error)
+    } else {
+      const btnContainer = document.getElementById("btnContainer");
+      btnContainer.classList.add("saveValidate");
+      setTimeout(() => {
+        btnContainer.classList.remove("saveValidate");
+      }, 2000)
     }
 };
 
@@ -74,8 +85,9 @@ async function getHobby() {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-    paragraph.textContent = data.hobby;
-    aLink.textContent = data.link; 
+    paragraph.textContent = "";
+    aLink.setAttribute("href", data.link);
+    aLink.textContent = data.hobby;
     showLink();
     showEl();
   } catch (error) {

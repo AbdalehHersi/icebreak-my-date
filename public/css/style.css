@@ -14,7 +14,7 @@ main {
     position: relative;
 }
 
-main::before {
+body::before {
     content: ' ';
     display: block;
     position: absolute;
@@ -71,5 +71,15 @@ section {
 }
 
 .button {
-    display: block;
+    display: inline;
+}
+
+.saveValidate::after {
+    content: "✔️ Saved to favorites";
+    color: green;
+}
+
+.saveValidateError::after {
+    content: "⚠️ Cannot save the same Icebreak twice";
+    color: orange;
 }
