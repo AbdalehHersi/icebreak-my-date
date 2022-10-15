@@ -73,3 +73,13 @@ section {
 .button {
     display: inline;
 }
+
+.saveValidate::after {
+    content: "✔️ Saved to favorites";
+    color: green;
+}
+
+.saveValidateError::after {
+    content: "⚠️ Cannot save the same Icebreak twice";
+    color: orange;
+}
