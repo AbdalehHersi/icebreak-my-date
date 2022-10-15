@@ -1,6 +1,6 @@
 * {
     font-family: 'Amatic SC', cursive;
-  }
+}
 
 * {
     margin: 0;
@@ -30,29 +30,29 @@ main {
     top: 0;
     width: 100%;
     height: 100vh;
-    opacity: 0.85;
+    /* opacity: 0.85; */
     background-image: url('../romantic-couple-cafe-is-drinking-coffee-talking-handsome-man-beautiful-girl-enjoying-being-together.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: cover;
-    
+
 }
 
 .header {
-background-color: rgb(182, 182, 182);
-font-size: 75px;
-color:black;
-text-align: center;
-opacity: 0.7;
+    background-color: rgb(182, 182, 182);
+    font-size: 75px;
+    color: black;
+    text-align: center;
+    opacity: 0.85;
 }
 
 section {
     height: 100vh;
     width: auto;
-    position: relative;
-    display: flex;
+    /* position: relative; */
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .loginValidator::after {
@@ -78,33 +78,34 @@ section {
 .box {
     padding: 2rem;
     margin: 2rem;
-    background-color:rgb(182, 182, 182);
+    background-color: rgb(182, 182, 182);
     opacity: 0.7;
     border-radius: 30px;
-    width: 30vw;
+    width: 50vw;
+    height: auto;
 }
 
 .FORMS {
     padding: 3rem;
 }
 
-.button {
+/* .button {
     display: block;
-}
+} */
 
 #login-btn {
-    display: block;
-    position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-150%);
-  border-style:none;
+    display: inline;
+    /* position: relative; */
+    top: 50%;
+    /* -ms-transform: translateY(-50%); */
+    /* transform: translateY(-150%); */
+    border-style: none;
     padding: 10px;
     margin: 5px;
-    width: 10vw;
-    font-size:x-large;
-    background-color: rgb(182, 182, 182);
-    opacity: 0.7;
+    width: 15vw;
+    font-size: 40px;
+    background-color: black;
+    opacity: 0.9;
     border-radius: 5px;
 }
 
@@ -116,4 +117,16 @@ section {
 .saveValidateError::after {
     content: "⚠️ Cannot save the same Icebreak twice";
     color: orange;
+}
+
+.btnGroup {
+    height: 15%;
+}
+
+
+.Container {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

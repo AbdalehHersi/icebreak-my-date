@@ -20,25 +20,27 @@
 <body id="main">
     <main>
         <header class="header">Icebreak My Date</header>
-        <section>
+        <div class="btnGroup">
             {{#if logged_in}}
+            <button><a href="/main">Home</a></button>
             <button><a href="/favorites" id="favourite-btn">favourite</a></button>
             <button id="logout">logout</button>
             {{else}}
             <button class="button" id="login-btn"><a class="anchor" href="/login">login/sign up</a></button>
             {{/if}}
-
+        </div>
+        <section>
             <div class="Container">
                 <div class="box">
                     {{{ body }}}
                 </div>
             </div>
 
+        </section>
+    </main>
             {{#if logged_in}}
             <script src='/js/logout.js'></script>
             {{/if}}
-        </section>
-    </main>
 </body>
 
 </html>

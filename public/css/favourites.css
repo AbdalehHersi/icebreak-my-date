@@ -14,7 +14,7 @@ main {
 }
 
 #logout {
-    display: block;
+    display: inline;
     border-style:none;
     padding: 10px;
     margin: 5px;
@@ -25,11 +25,18 @@ main {
     border-radius: 5px;
 }
 
-#favourite-btn {
+/* #favourite-btn {
     display: none;
 
-}
+} */
 
 #main .box {
     display: block;
+}
+
+.btnGroup {
+    display: block;
+}
+.Container {
+    position: relative;
 }

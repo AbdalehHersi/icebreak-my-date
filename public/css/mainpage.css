@@ -24,7 +24,7 @@ main {
 } */
 
 #logout {
-    display: block;
+    display: inline;
     border-style:none;
     padding: 10px;
     margin: 5px;
@@ -36,7 +36,7 @@ main {
 }
 
 #favourite-btn {
-    display: block;
+    display: inline;
     border-style:none;
     padding: 10px;
     margin: 5px;
