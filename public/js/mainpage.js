@@ -85,8 +85,9 @@ async function getHobby() {
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
-    paragraph.textContent = data.hobby;
-    aLink.textContent = data.link; 
+    paragraph.textContent = "";
+    aLink.setAttribute("href", data.link);
+    aLink.textContent = data.hobby;
     showLink();
     showEl();
   } catch (error) {
