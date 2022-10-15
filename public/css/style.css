@@ -107,3 +107,13 @@ section {
     opacity: 0.7;
     border-radius: 5px;
 }
+
+.saveValidate::after {
+    content: "✔️ Saved to favorites";
+    color: green;
+}
+
+.saveValidateError::after {
+    content: "⚠️ Cannot save the same Icebreak twice";
+    color: orange;
+}
