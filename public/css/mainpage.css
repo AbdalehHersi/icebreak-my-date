@@ -1,3 +1,7 @@
+* {
+    font-size: 25px;
+}
+
 main {
     content: ' ';
     display: block;
@@ -19,16 +23,13 @@ main {
     display: none;
 }
 
-/* #mainpage .row .col-md-6 {
-    display: block;
-} */
-
 #logout {
     display: inline;
     border-style:none;
     padding: 10px;
     margin: 5px;
-    width: 10vw;
+    width: 4.5vw;
+    height: 3vw;
     font-size:x-large;
     background-color: rgb(182, 182, 182);
     opacity: 0.7;
@@ -40,20 +41,54 @@ main {
     border-style:none;
     padding: 10px;
     margin: 5px;
-    width: 10vw;
+    width: 4.5vw;
+    height: 3vw;
+    font-size:small;
+    background-color: rgb(182, 182, 182);
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+
+#home-btn {
+    display: inline;
+    border-style:none;
+    padding: 10px;
+    margin: 5px;
+    width: 4.5vw;
+    height: 3vw;
     font-size:x-large;
     background-color: rgb(182, 182, 182);
     opacity: 0.7;
     border-radius: 5px;
 }
 
+
 #main .box {
-    display: block;
+    display:block;
+    position: fixed;
+    padding: 1vw;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    opacity: 0.9;
+    text-align:center;
+    width: 50vw;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
 }
 
-/* #heading-two {
-    display: contents;
-} */
+#btn-hobby {
+    width: 30vw;
+}
+
+#btn-bucket {
+    width: 30vw;
+}
+
+#btn-fact {
+    width: 30vw;
+}
 
 
 
