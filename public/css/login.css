@@ -1,8 +1,43 @@
+* {
+    font-size: 30px;
+}
+
 
 #main .box {
     display:block;
+    padding: 0.1vw;
+    margin-bottom: 10%;
+    margin-top: 20%;
+    opacity: 0.9;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
 }
 
 #login-btn {
     display: none;
 }
+
+/* .form-group {
+    background-color: aqua;
+} */
+
+/* .col-md-6 FORMS {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+} */
+
+/* .form-group {
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+} */
+
+@media only screen and (max-width: 300px) {
+    #main .form-group {
+      background-color: lightblue;
+      margin-left: 1vw;
+    }
+  }
+

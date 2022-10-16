@@ -20,17 +20,18 @@
 <body id="main">
     <main>
 
-        <header class="header">Icebreak My Date</header>
-        <div class="btnGroup">
+        <header class="header">Icebreak My Date</header><p></p>
+        {{!-- <div class="btnGroup"> --}}
             {{#if logged_in}}
-            <button><a href="/main">Home</a></button>
-            <button><a href="/favorites" id="favourite-btn">favourite</a></button>
+            <button class = "button" id="home-btn"><a class="anchor" href="/main">Home</a></button>
+            <button class="button" id="favourite-btn"><a class="anchor" href="/favorites" class = "buttons">faves</a></button>
             <button id="logout">logout</button>
             {{else}}
             <button class="button" id="login-btn"><a class="anchor" href="/login">login/sign up</a></button>
             {{/if}}
-        </div>
+        {{!-- </div> --}}
         <section>
+            <p></p>
             <div class="Container">
                 <div class="box">
                     {{{ body }}}
