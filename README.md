@@ -7,10 +7,10 @@ Create a short presentation to provide a brief overview of the application, work
 
 # Icebreak-my-Date
 
-## Icebreak my Date, is an application for those who find it difficult to start a conversation and keep it going, for those who want to talk about different topics everyday and within a day. It, provides a wide range of ideas to talk about on a first date, and on all following ones.
+## Icebreak my Date, is an application for those who find it difficult to start a conversation on a date and keep it going, for those who want to talk about different topics everyday and within a day. It, provides a wide range of ideas to talk about on a first date, and on all following ones.
 
 Just sugnup and you will have an access to save and view your own list of the best topics to talk about, you can update or change it anytime. Have at hand this application and be always prepared and confident.
-Your soulmate is on the way, but don't warry, we've got you covered!
+Your soulmate is on the way, but don't worry, we've got you covered!
 
 ### User Story:
 Going on the date I want to create a good impression o myself and make sure that the awkward silence will not ruin it.
