@@ -21,6 +21,7 @@ const loginFormHandler = async (event) => {
         errorMessage.classList.remove("loginValidator")
       }
     } else {
+      console.log("Response: ", response)
       errorMessage.classList.add("loginValidator");
     }
   } else {
@@ -35,7 +36,6 @@ const signupFormHandler = async (event) => {
   const username = document.querySelector('#name-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
   const errorMessage = document.getElementById("errorMessage");
-
   if (username && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
@@ -60,6 +60,15 @@ const signupFormHandler = async (event) => {
   }
 };
 
+
 document.querySelector(".login-form").addEventListener('submit', loginFormHandler);
 
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+
+document.querySelector('#password-signup').addEventListener('blur', (event) => {
+  const password = document.querySelector('#password-signup').value;
+  const indicator = document.querySelector("#passwordStrength");
+  
+  var strength = validator.isStrongPassword(password, {returnScore: true});
+  indicator.textContent = strength;
+});
