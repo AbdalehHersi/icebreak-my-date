@@ -68,7 +68,14 @@ document.querySelector('.signup-form').addEventListener('submit', signupFormHand
 document.querySelector('#password-signup').addEventListener('blur', (event) => {
   const password = document.querySelector('#password-signup').value;
   const indicator = document.querySelector("#passwordStrength");
-  
-  var strength = validator.isStrongPassword(password, {returnScore: true});
+
+  var strength = validator.isStrongPassword(password, { returnScore: true });
+  if (strength > 45) {
+    indicator.setAttribute("style", "color: green");
+  } else if (strength > 30 && strength < 45) {
+    indicator.setAttribute("style", "color: yellow");
+  } else {
+    indicator.setAttribute("style", "color: red");
+  }
   indicator.textContent = strength;
 });
