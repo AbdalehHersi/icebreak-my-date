@@ -70,7 +70,7 @@ document.querySelector('#password-signup').addEventListener('blur', (event) => {
   const indicator = document.querySelector("#passwordStrength");
 
   var strength = validator.isStrongPassword(password, { returnScore: true });
-  if (strength > 45) {
+  if (strength >= 45) {
     indicator.setAttribute("style", "color: green");
   } else if (strength > 30 && strength < 45) {
     indicator.setAttribute("style", "color: yellow");
