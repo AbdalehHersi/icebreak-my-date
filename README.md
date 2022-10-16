@@ -33,8 +33,10 @@ To help users feel themselves more organized, prepared and confident going on th
 
 ## Screenshots of Application:
 
-![Preview image]()
-![Preview image]()
+![Preview image](./public/Screenshot%201.png)
+![Preview image](./public/Screenshot%202.png)
+![Preview image](./public/Screenshot%203.png)
+![Preview image](./public/Screenshot%204.png)
 
 
 ## URL to Deployed Application:
@@ -42,6 +44,6 @@ To help users feel themselves more organized, prepared and confident going on th
 
 
 ## URL to the Group Presentation:
-[Web page]()
+[Web page](https://docs.google.com/presentation/d/10AKOfkGUYEVO8xHmRPdoCccvAHfaVTjOh7BbpKCtYyc/edit?usp=sharing)
 
 
