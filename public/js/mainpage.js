@@ -1,6 +1,6 @@
 let paragraph = document.getElementById("apiResults");
 let aLink = document.getElementById("hobbyLink");
-let saveBtn = document.getElementById("btn-fav");  
+let saveBtn = document.getElementById("btn-fav");
 
 function hideEl() {
   if (saveBtn.style.display === "block") {
@@ -19,11 +19,11 @@ function showEl() {
 };
 
 function hideLink() {
-    if (aLink.style.display === "block") {
-      aLink.style.display = "none";
-    } else {
-      aLink.style.display = "none";
-    }
+  if (aLink.style.display === "block") {
+    aLink.style.display = "none";
+  } else {
+    aLink.style.display = "none";
+  }
 }
 
 function showLink() {
@@ -35,15 +35,15 @@ function showLink() {
 };
 
 const saveFavourite = async () => {
-  
-  var favourite = paragraph.textContent;
+  if (aLink.textContent) {
+    var favourite = aLink.textContent;
 
     const response = await fetch('/api/favourites', {
       method: 'POST',
-      body: JSON.stringify({favourite}),
+      body: JSON.stringify({ favourite }),
       headers: { 'Content-Type': 'application/json' },
     });
-    
+
     if (!response.ok) {
       const btnContainer = document.getElementById("btnContainer");
       btnContainer.classList.add("saveValidateError");
@@ -58,6 +58,30 @@ const saveFavourite = async () => {
         btnContainer.classList.remove("saveValidate");
       }, 2000)
     }
+  } else {
+    var favourite = paragraph.textContent;
+
+    const response = await fetch('/api/favourites', {
+      method: 'POST',
+      body: JSON.stringify({ favourite }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (!response.ok) {
+      const btnContainer = document.getElementById("btnContainer");
+      btnContainer.classList.add("saveValidateError");
+      setTimeout(() => {
+        btnContainer.classList.remove("saveValidateError");
+      }, 2000)
+      console.error(error)
+    } else {
+      const btnContainer = document.getElementById("btnContainer");
+      btnContainer.classList.add("saveValidate");
+      setTimeout(() => {
+        btnContainer.classList.remove("saveValidate");
+      }, 2000)
+    }
+  }
 };
 
 hideEl();
@@ -67,6 +91,7 @@ hideEl();
 async function getBucket() {
   const url = "/api/request/bucketlist";
   try {
+    aLink.textContent = "";
     hideLink()
     const response = await fetch(url);
     const data = await response.json();
@@ -101,6 +126,7 @@ async function getHobby() {
 async function getFact() {
   const url = "/api/request/fact";
   try {
+    aLink.textContent = "";
     hideLink()
     const response = await fetch(url);
     const data = await response.json();
