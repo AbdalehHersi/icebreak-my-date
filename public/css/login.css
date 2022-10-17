@@ -1,8 +1,6 @@
 * {
     font-size: 30px;
 }
-
-
 #main .box {
     display:block;
     padding: 0vw;
@@ -14,31 +12,28 @@
     height: 80vh;
     max-height: 100%;
 }
-
 #login-btn {
     display: none;
 }
-
+#submit {
+    width: 10vw;
+}
 /* .form-group {
     background-color: aqua;
 } */
-
 /* .col-md-6 FORMS {
     max-width: 100%;
     height: auto;
     max-height: 100%;
 } */
-
 /* .form-group {
         max-width: 100%;
         height: auto;
         max-height: 100%;
 } */
-
 @media only screen and (max-width: 300px) {
     #main .form-group {
       background-color: lightblue;
       margin-left: 1vw;
     }
   }
-
