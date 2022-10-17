@@ -1,46 +1,49 @@
- <link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/css/login.css">
+
 <body id="login-page">
-<div class="row">
-  <div class="col-md-6 FORMS">
-    <h2>Login</h2>
+  <div class="row">
+    <div class="col-md-6 FORMS">
+      <h2>Login</h2>
 
-    <form class="form login-form">
+      <form class="form login-form">
         <div class="form-group">
-        <label for="name-signup">username:</label>
-        <input class="form-input" type="text" id="username-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <p>
-      <div id="passwordLogin" class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-        </p>
-      </div>
-    </form>
-  </div>
-  <div class="col-md-6 FORMS">
-  
-    <h2>Signup</h2>
+          <label for="name-signup">username:</label>
+          <input class="form-input" type="text" id="username-login" />
+        </div>
+        <div class="form-group">
+          <label for="password-login">password:</label>
+          <input class="form-input" type="password" id="password-login" />
+        </div>
+        <p>
+        <div id="passwordLogin" class="form-group">
+          <button class="btn btn-primary" type="submit">login</button>
+          </p>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6 FORMS">
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">username:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <p>
-      <div id="errorMessage" class="form-group">
-        </p>
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
+      <h2>Signup</h2>
+
+      <form class="form signup-form">
+        <div class="form-group">
+          <label for="name-signup">username:</label>
+          <input class="form-input" type="text" id="name-signup" />
+        </div>
+        <div class="form-group">
+          <label for="password-signup">password:</label>
+          <input class="form-input" type="password" id="password-signup" />
+        </div>
+        <p id="passwordStrength">0</p>
+        <p>
+        <div id="errorMessage" class="form-group">
+          </p>
+          <button class="btn btn-primary" type="submit">signup</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 </body>
 
+<script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 <script src="/js/login.js"></script>

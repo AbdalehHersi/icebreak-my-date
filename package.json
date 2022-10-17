@@ -30,6 +30,7 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "path": "^0.12.7",
-    "sequelize": "^6.5.0"
+    "sequelize": "^6.5.0",
+    "validator": "^13.7.0"
   }
 }
