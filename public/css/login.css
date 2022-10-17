@@ -5,15 +5,15 @@
 
 #main .box {
     display:block;
-    padding: 0.1vw;
+    padding: 0vw;
     margin-bottom: 10%;
     margin-top: 20%;
     opacity: 0.9;
+    width: 55vw;
     max-width: 100%;
-    height: auto;
+    height: 80vh;
     max-height: 100%;
 }
-
 
 #login-btn {
     display: none;
